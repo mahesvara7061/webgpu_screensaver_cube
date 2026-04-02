@@ -23,11 +23,11 @@ Dự án sử dụng một số kiến thức hình học không gian và đại
 ### 1. Tính toán giới hạn khung nhìn (Frustum Bounds)
 Để khối lập phương nảy lại đúng mép màn hình, chúng ta cần tính toán giới hạn không gian hiển thị (visible half-extents) tại độ sâu $Z$ của camera:
 
-$$halfY = \tan\left(\frac{FOV_Y}{2}\right) \times CAMERA\_DIST$$
-$$halfX = halfY \times aspect\_ratio$$
+$$halfY = \tan\left(\frac{FOV_Y}{2}\right) \times CAMERA\_{DIST}$$
+$$halfX = halfY \times aspect\_{ratio}$$
 
 Sau đó, giới hạn di chuyển của tâm khối lập phương (bound) được tính bằng cách trừ đi một nửa kích thước của nó:
-$$bound_X = halfX - CUBE\_HALF$$
+$$bound_X = halfX - CUBE\_{HALF}$$
 
 ### 2. Phương trình chuyển động và Phản xạ
 Vị trí của khối lập phương được cập nhật dựa trên vận tốc và biến thiên thời gian $\Delta t$ (Delta time) nhằm đảm bảo chuyển động mượt mà không phụ thuộc vào FPS:
